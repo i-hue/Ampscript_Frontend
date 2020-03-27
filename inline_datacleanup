@@ -1,0 +1,5 @@
+<span style="font-family: Arial, Helvetica, sans-serif;">
+%%[
+												VAR @VALUE
+												SET @VALUE = VALUE]%%
+                        %%=Replace (Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(@VALUE,",WT.",""),"&pound;",""),"?",""),"$",""),"&",""),"n",""),"b",""),"s",""),"p",""),";",""),"&Atilde;",""),"&Acirc;","")=%%</span>
