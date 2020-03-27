@@ -1,0 +1,15 @@
+<table>
+    <tr>
+        <td>Coupon Code (ClaimRow)</td>
+        <td>
+            %%[VAR @CouponRow
+            SET @CouponRow = ClaimRow("COUPONCODEDE", "CouponCode", "IsClaimed", "None Available", "JobID", JobID, "ListID", ListID, "BatchID", _JobSubscriberBatchID, "SubscriberID", SubscriberID) 
+            IF EMPTY(@CouponRow) THEN ]%%
+                No coupons available
+            %%[ ELSE ]%%
+                Your Coupon Code is %%= FIELD(@CouponRow,"CouponCode") =%%
+            %%[ ENDIF ]%%
+        </td>
+    </tr>
+</table>
+%%[ELSEIF  THEN]%%
