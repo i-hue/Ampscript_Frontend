@@ -1,0 +1,13 @@
+												%%[IF STARRATING == 1 THEN]%%
+												%%=ContentAreaByName("my contents\MASTER BLOCKS\rating\1","",0,"")=%% 
+												%%[ELSEIF STARRATING == 2 THEN]%%
+												%%=ContentAreaByName("my contents\MASTER BLOCKS\rating\2","",0,"")=%%
+												%%[ELSEIF STARRATING == 3 THEN]%%
+												%%=ContentAreaByName("my contents\MASTER BLOCKS\rating\3","",0,"")=%%
+												%%[ELSEIF STARRATING == 4 THEN]%%
+												%%=ContentAreaByName("my contents\MASTER BLOCKS\rating\4","",0,"")=%%
+												%%[ELSEIF STARRATING == 5 THEN]%%
+												%%=ContentAreaByName("my contents\MASTER BLOCKS\rating\5","",0,"")=%%
+												%%[ELSE]%%
+												%%=ContentAreaByName("my contents\MASTER BLOCKS\rating\6","",0,"")=%%
+												%%[ENDIF]%%
