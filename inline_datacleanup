@@ -1,5 +1,2 @@
-<span style="font-family: Arial, Helvetica, sans-serif;">
-%%[
-												VAR @VALUE
-												SET @VALUE = VALUE]%%
-                        %%=Replace (Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(@VALUE,",WT.",""),"&pound;",""),"?",""),"$",""),"&",""),"n",""),"b",""),"s",""),"p",""),";",""),"&Atilde;",""),"&Acirc;","")=%%</span>
+%%=ProperCase 
+(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(Replace(@HOTELNAME,"Hotel Luxueux au c?ur de l?a&Atilde;&copy;roport. Chambre design & &Atilde;&copy;l&Atilde;&copy;gantes avec Wifi offert - 4*","Hotel Luxueux au c&oelig;ur de l&rsquo;aeroport.")," !!","")," & and","and")," &","and")," ***",""),"??",""),"???",""),"??lys??es",""),"&Atilde;",""),"&Atilde;&uml;",""),"&Atilde;&copy;",""),"&Acirc;&reg;",""),"&Atilde;&frac14;",""),"&Atilde;&sup3;",""),"&Acirc;&ordm;",""),"L'H??tel","L'Hotel"), "R??sidence","Residence"),"WT.z_",""),"","details"))=%%
