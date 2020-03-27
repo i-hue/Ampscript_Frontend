@@ -1,0 +1,8 @@
+%%[VAR @FIRSTNAME 
+SET @FIRSTNAME = FIRSTNAME]%%
+%%=ProperCase(@FIRSTNAME)
+%%[if not empty(@FIRSTNAME)then]%%
+%%FIRSTNAME%%
+%%[ELSE]%%
+there
+%%[endif]%%=%
