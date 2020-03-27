@@ -1,0 +1,36 @@
+%%[
+var @apik, @urlid, @res
+set @apik = "es7ttHdRpLFqkbWRMgGYDx7WxVTeNreDGr7hZNx6" 
+set @urlid = concat('https://api.nasa.gov/planetary/apod?api_key=',@apik)
+set @res = HTTPGET(@urlid,false,0,@CallStatus)
+]%%
+
+@res: %%=v(@res)=%%
+
+
+<script runat="server" language="javascript">
+Platform.Load("Core","1");
+
+var response = Variable.GetValue("@res");
+
+var json = Platform.Function.ParseJSON(res);
+  
+Variable.SetValue("@hdurl",json.hdurl);
+Variable.SetValue("@title",json.title);
+Variable.SetValue("@url",json.url);
+</script>
+
+<img style="height:100vh" src="%%=v(@hdurl)=%%">
+
+%%[ 
+    set @hdurl = RequestParameter("hdurl")
+set @title = RequestParameter("title")
+set @url = RequestParameter("url")
+   
+ if Empty(@hdurl)
+        set @success = false
+    else 
+        InsertData('TEST00_DE_PASS','hdurl',@hdurl,'title@',@title,'url',@url,'Date',Now())
+    endif
+
+]%%
